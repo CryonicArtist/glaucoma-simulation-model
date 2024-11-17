@@ -6,7 +6,14 @@ To download all dependencies in requirements.txt open terminal and type this cmd
 
 pip install -r requirements.txt
 
-Current Data Results:
+Current Data Results (1.2.3):
+
+![image](https://github.com/user-attachments/assets/84b41a40-19d7-46b5-96ef-97cc98c7d727)
+
+![image](https://github.com/user-attachments/assets/7324b0d0-fa70-43b0-8ae3-dc4161a34029)
+
+![image](https://github.com/user-attachments/assets/765c8da8-a835-41c2-862a-93a331b5e9c8)
+
 
 Columns Explained:
 
