@@ -9,10 +9,12 @@ from sklearn.metrics import roc_curve, roc_auc_score
 # Virtual Population Creation
 def generate_data():
     # Generate data for healthy and glaucoma patients
+    # ng/mL
     np.random.seed(42)
-    healthy_levels = np.random.normal(loc=150, scale=20, size=1000) 
-    glaucoma_levels = np.random.normal(loc=250, scale=30, size=1000) 
+    healthy_levels = np.random.normal(loc=204, scale=20, size=1000) 
+    glaucoma_levels = np.random.normal(loc=218, scale=20, size=1000) 
     
+
 # Labeling the data
     data = pd.DataFrame({
         'lactoferrin_level': np.concatenate([healthy_levels, glaucoma_levels]),
