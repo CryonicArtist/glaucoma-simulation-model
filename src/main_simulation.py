@@ -8,10 +8,10 @@ from sklearn.metrics import roc_curve, roc_auc_score
 
 # Virtual Population Creation
 def generate_data():
-    # Generate synthetic data for healthy and glaucoma patients
+    # Generate data for healthy and glaucoma patients
     np.random.seed(42)
-    healthy_levels = np.random.normal(loc=200, scale=20, size=1000)  # Adjust values as needed
-    glaucoma_levels = np.random.normal(loc=250, scale=30, size=1000)  # Adjust values as needed
+    healthy_levels = np.random.normal(loc=150, scale=20, size=1000) 
+    glaucoma_levels = np.random.normal(loc=250, scale=30, size=1000) 
     
 # Labeling the data
     data = pd.DataFrame({
