@@ -27,24 +27,24 @@ Columns Explained:
 
     Recall (Sensitivity or True Positive Rate):
         The proportion of actual positives that are correctly identified by the model.
-        Recall for class 0 (healthy): Of all the healthy samples, how many were correctly identified as healthy.
-        Recall for class 1 (glaucoma): Of all the glaucoma samples, how many were correctly identified as glaucoma.
+        Recall for class 0: Of all the healthy samples, how many were correctly identified as healthy.
+        Recall for class 1: Of all the glaucoma samples, how many were correctly identified as glaucoma.
         Formula:
         Recall=True PositivesTrue Positives + False Negatives
         Recall=True Positives + False NegativesTrue Positives​
 
     F1-Score:
         The harmonic mean of precision and recall. It balances precision and recall, especially useful when classes are imbalanced.
-        F1 for class 0 (healthy): A combined measure of precision and recall for healthy individuals.
-        F1 for class 1 (glaucoma): A combined measure of precision and recall for glaucoma patients.
+        F1 for class 0: A combined measure of precision and recall for healthy individuals.
+        F1 for class 1: A combined measure of precision and recall for glaucoma patients.
         Formula:
         F1-Score=2×Precision×RecallPrecision + Recall
         F1-Score=2×Precision + RecallPrecision×Recall​
 
     Support:
         The number of true instances for each class in the test dataset.
-        Support for class 0 (healthy): The number of healthy samples in the test set.
-        Support for class 1 (glaucoma): The number of glaucoma samples in the test set.
+        Support for class 0: The number of healthy samples in the test set.
+        Support for class 1: The number of glaucoma samples in the test set.
 
     Accuracy:
         The overall proportion of correctly predicted instances (both healthy and glaucoma).
