@@ -8,14 +8,14 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import roc_curve, roc_auc_score, classification_report
 
 
-# Virtual Population Creation
+# Population Creation
 def generate_data():
-    # Generate lactoferrin levels for healthy and glaucoma patients
+    # Generate lactoferrin levels
     np.random.seed(42)
     healthy_lactoferrin = np.random.normal(loc=204, scale=20, size=1000)
     glaucoma_lactoferrin = np.random.normal(loc=218, scale=20, size=1000)
 
-    # Generate serum ferritin levels for healthy and glaucoma patients
+    # Generate serum ferritin levels
     # Ferritin: Healthy ~ 85.7 ng/mL, Glaucoma ~ 116.1 ng/mL
     healthy_ferritin = np.random.normal(loc=85.7, scale=20, size=1000)
     glaucoma_ferritin = np.random.normal(loc=116.1, scale=20, size=1000)
@@ -29,7 +29,7 @@ def generate_data():
     return data
 
 
-# Plotting the data (lactoferrin and serum ferritin distributions)
+# Plotting the data
 def plot_histogram(data):
     plt.hist(data[data['label'] == 0]['lactoferrin_level'], alpha=0.5, label='Healthy Lactoferrin', bins=30)
     plt.hist(data[data['label'] == 1]['lactoferrin_level'], alpha=0.5, label='Glaucoma Lactoferrin', bins=30)
@@ -44,8 +44,7 @@ def plot_histogram(data):
 
 # Evaluating the model (Logistic Regression)
 def evaluate_model(data):
-    # Split the data into features and labels
-    X = data[['lactoferrin_level', 'serum_ferritin_level']]  # Using both biomarkers
+    X = data[['lactoferrin_level', 'serum_ferritin_level']]  # Biomarkers dump
     y = data['label']
     
     # Train/test split
@@ -80,13 +79,10 @@ def evaluate_roc_curve(model, X_test, y_test):
 def main():
     data = generate_data()
 
-    # Plot histograms for lactoferrin and serum ferritin levels
     plot_histogram(data)
 
-    # Evaluate the model using logistic regression
     model, X_test, y_test = evaluate_model(data)
 
-    # Evaluate and plot the ROC curve
     evaluate_roc_curve(model, X_test, y_test)
 
 

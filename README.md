@@ -1,8 +1,12 @@
 # glaucoma-simulation-model
 
+Current biomarkers being used as of 1.2.3: Lactoferrin Plasma Levels (ng/ml) |  Serum Ferritin Levels (ng/ml)
+
 To download all dependencies in requirements.txt open terminal and type this cmd:
 
 pip install -r requirements.txt
+
+Current Data Results:
 
 Columns Explained:
 
